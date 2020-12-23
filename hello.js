@@ -19,6 +19,7 @@ http.createServer(function (req, res) {
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
+const PORT = peocess.env.PORT || 5000;
 
 http.createServer(function (req, res) {
   var q = url.parse(req.url, true);
@@ -44,6 +45,6 @@ http.createServer(function (req, res) {
   });
 
   // console.log("Server Listening on port 8080 .....");
-}).listen(8080);
+}).listen(PORT);
 
-console.log("Server Listening on port 8080 ...")
+console.log("Server Listening on port "  + PORT)
